@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Author -->
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:layout_below="@id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Image Holder -->
+    <ImageView
+        android:id="@+id/imageViewDice"
+        android:layout_width="186dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/textViewAuthor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/cleverbaby" />
+
+    <!-- RadioGroup for Dice Type -->
+    <RadioGroup
+        android:id="@+id/radioGroupDiceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewDice"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <!-- RadioButton for 4-sided dice -->
+        <RadioButton
+            android:id="@+id/radioButton4Sided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="4 Sided"
+            android:layout_margin="8dp" />
+
+        <!-- RadioButton for 6-sided dice -->
+        <RadioButton
+            android:id="@+id/radioButton6Sided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 Sided"
+            android:layout_margin="8dp" />
+
+        <!-- RadioButton for 8-sided dice -->
+        <RadioButton
+            android:id="@+id/radioButton8Sided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 Sided"
+            android:layout_margin="8dp" />
+    </RadioGroup>
+
+    <!-- Roll Button -->
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRoll"
+        android:layout_below="@id/radioGroupDiceType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnReset"
+        android:layout_below="@id/btnRoll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnClose"
+        android:layout_below="@id/btnReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
